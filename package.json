@@ -1,0 +1,11 @@
+{
+  "name": "pranathi-deepak-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive React and TailwindCSS portfolio for Pranathi Deepak.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check-files.mjs"
+  }
+}
