@@ -215,7 +215,7 @@ function Experience() {
   const [active, setActive] = useState(0);
   return h(
     SectionShell,
-    { id: "experience", eyebrow: "Experience timeline", title: "Impact-heavy roles with expandable proof points." },
+    { id: "experience", eyebrow: "Experience timeline", title: "A multitude of experiences in different domains that showcases my ability to adapt to the specific project needs" },
     h("div", { className: "grid gap-5 lg:grid-cols-[0.42fr_1fr]" },
       h("div", { className: "space-y-3" },
         data.experience.map((job, index) =>
@@ -262,7 +262,7 @@ function Projects() {
 
   return h(
     SectionShell,
-    { id: "projects", eyebrow: "Selected work", title: "Interactive case-study cards ready for more project links." },
+    { id: "projects", eyebrow: "Selected work", title: "Projects that showcase my commitment to upskilling and pushing the frontier of novel technologies" },
     h("div", { className: "mb-6 flex flex-wrap gap-2" },
       tags.map((tag) =>
         h("button", {
