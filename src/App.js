@@ -76,10 +76,9 @@ function Hero() {
     h("div", { className: "mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-10" },
       h("div", { className: "relative z-10" },
         h("p", { className: "eyebrow" }, "Machine Learning Engineer"),
-        h("h1", { className: "mt-5 max-w-4xl text-5xl font-black leading-tight text-paper sm:text-6xl lg:text-7xl" },
-          "Building AI systems recruiters can ",
-          h("span", { className: "text-mint" }, "trust in production"),
-          "."
+        h("h1", { className: "hero-title" },
+          "Committed to building reliable AI systems",
+          h("span", { className: "hero-title-accent" }, "that work in production")
         ),
         h("p", { className: "mt-6 max-w-2xl text-lg leading-8 text-paper/72" }, data.profile.headline),
         h("div", { className: "mt-8 flex flex-wrap gap-3" },
@@ -103,7 +102,10 @@ function Hero() {
             h("div", { className: "min-w-0" },
               h("p", { className: "text-sm font-semibold text-mint" }, "Open to ML Engineer roles"),
               h("h2", { className: "mt-2 text-2xl font-black text-paper" }, data.profile.name),
-              h("p", { className: "mt-2 text-sm leading-6 text-paper/65" }, `${data.profile.location} - ${data.profile.availability}`)
+              h("p", { className: "mt-2 text-sm leading-6 text-paper/65 profile-location" },
+                h("span", null, data.profile.location),
+                h("span", { className: "relocation-badge" }, "Open to relocation")
+              )
             )
           ),
           h("div", { className: "mt-8 rounded-md border border-white/10 bg-white/[0.04] p-4" },
@@ -140,7 +142,7 @@ function Hero() {
 function About() {
   return h(
     SectionShell,
-    { id: "about", eyebrow: "Recruiter snapshot", title: "A production-minded ML engineer with GenAI depth." },
+    { id: "about", eyebrow: "Career snapshot", title: "A production-minded ML engineer with GenAI depth." },
     h("div", { className: "grid gap-8 lg:grid-cols-[1fr_0.78fr]" },
       h("div", { className: "content-card p-7 sm:p-9" },
         h("p", { className: "text-lg leading-9 text-paper/75" }, data.profile.summary),
@@ -184,7 +186,7 @@ function Skills() {
 
   return h(
     SectionShell,
-    { id: "skills", eyebrow: "Technical toolkit", title: "Searchable skills grouped by the work recruiters hire for." },
+    { id: "skills", eyebrow: "Technical toolkit", title: "Skills organized by role and expertise." },
     h("div", { className: "mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between" },
       h("label", { className: "sr-only", htmlFor: "skill-search" }, "Search skills"),
       h("input", {
@@ -314,8 +316,8 @@ function Contact() {
     h("div", { className: "mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_0.8fr] lg:px-10" },
       h("div", null,
         h("p", { className: "font-mono text-xs font-bold uppercase tracking-[0.28em] text-clay" }, "Let's connect"),
-        h("h2", { className: "mt-5 max-w-3xl text-4xl font-black leading-tight sm:text-5xl" }, "Recruiter-friendly, proof-first, and ready for the next ML role."),
-        h("p", { className: "mt-6 max-w-2xl text-lg leading-8 text-ink/68" }, "This scaffold is ready for project links, downloadable resume placement, demos, certificates, testimonials, or a deeper case-study layer whenever you want to add them."),
+        h("h2", { className: "mt-5 max-w-3xl text-4xl font-black leading-tight sm:text-5xl" }, "I'd love to connect and learn more about any opportunities."),
+        h("p", { className: "mt-6 max-w-2xl text-lg leading-8 text-ink/68" }, "If you're hiring for production-ready ML work, let's talk about how I can help build dependable systems."),
         h("div", { className: "mt-8 flex flex-wrap gap-3" },
           h("a", { className: "dark-btn", href: `mailto:${data.profile.email}` }, "Email Pranathi"),
           h("a", { className: "light-btn", href: data.profile.resumeFile, target: "_blank", rel: "noreferrer" }, "Resume"),
@@ -327,13 +329,15 @@ function Contact() {
         [
           ["Email", data.profile.email, `mailto:${data.profile.email}`],
           ["Phone", data.profile.phone, `tel:${data.profile.phone.replace(/[^0-9]/g, "")}`],
-          ["Location", `${data.profile.location} - ${data.profile.availability}`, "#home"],
+          ["Location", null, "#home"],
           ["LinkedIn", "linkedin.com/in/pranathi-deepak", data.profile.linkedin],
           ["GitHub", "github.com/PranathiDeepak", data.profile.github]
         ].map(([label, value, href]) =>
           h("a", { key: label, href, className: "contact-row", target: href.startsWith("http") ? "_blank" : undefined, rel: href.startsWith("http") ? "noreferrer" : undefined },
             h("span", null, label),
-            h("strong", null, value)
+            label === "Location"
+              ? h("strong", null, `${data.profile.location} (${data.profile.availability})`)
+              : h("strong", null, value)
           )
         )
       )

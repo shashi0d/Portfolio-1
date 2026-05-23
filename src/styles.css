@@ -37,6 +37,22 @@ body::selection {
   mask-image: linear-gradient(to bottom, black, transparent 86%);
 }
 
+.hero-title {
+  margin-top: 1.25rem;
+  max-width: 36rem;
+  color: #f7f2e8;
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+}
+
+.hero-title-accent {
+  display: block;
+  margin-top: 0.35rem;
+  color: #7bdcb5;
+}
+
 .section-shell {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
@@ -186,6 +202,28 @@ body::selection {
   border-color: rgba(123, 220, 181, 0.55);
   background: rgba(123, 220, 181, 0.14);
   color: #7bdcb5;
+}
+
+.profile-location,
+.contact-location {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.relocation-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(123, 220, 181, 0.14);
+  color: #7bdcb5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .signal-row {

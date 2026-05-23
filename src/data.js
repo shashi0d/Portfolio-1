@@ -12,7 +12,7 @@ window.portfolioData = {
     resumeFile: "PranathiDeepak_Resume_ElevateMe.pdf",
     headline: "Production ML, GenAI, RAG, and MLOps systems that move from notebooks to reliable user-facing products.",
     summary:
-      "Machine Learning Engineer with 4+ years of experience designing, training, and deploying production ML and AI systems at scale. Hands-on across Generative AI, Agentic AI systems, LLMs, RAG architectures, feature engineering, real-time inference services, and MLOps automation using Python, PyTorch, AWS, Docker, Kubernetes, and MLflow."
+      "Machine Learning Engineer with 4+ years of experience shipping production ML and Generative AI systems across financial services (KPMG) and applied AI environments. Recently completed a Master's in Computer Science with research focus on Generative AI and RAG systems. Hands-on builder of end-to-end ML pipelines using Python, PyTorch, and AWS, from feature engineering through real-time inference and MLOps. Recent work focuses on LLM and RAG systems with LangChain and LlamaIndex, including a multi-agent learning platform built on Llama 3.3 with adaptive content generation and evaluation. Strong on production deployment, MLOps lifecycle, and stakeholder communication on model governance."
   },
   metrics: [
     { value: "4+", label: "Years in ML and AI" },
@@ -83,24 +83,14 @@ window.portfolioData = {
       period: "Aug 2024 - Dec 2025",
       tags: ["RAG", "MLOps", "FastAPI", "AWS"],
       bullets: [
-        "Architected and deployed RAG pipelines using LangChain, LlamaIndex, and FAISS, enabling context-aware LLM responses over large structured and unstructured datasets and reducing information retrieval time by 60%.",
-        "Designed end-to-end ML pipelines using Python, Pandas, SQL, and AWS S3, automating ingestion, validation, and feature transformation while reducing manual data preparation effort by 60%.",
-        "Built embedding-based semantic search systems with transformer models, improving retrieval relevance and scalable knowledge discovery.",
-        "Optimized supervised models including XGBoost, Random Forest, and Logistic Regression with cross-validation and Bayesian tuning, improving predictive accuracy by 18%.",
-        "Deployed REST inference APIs using FastAPI and Docker for batch and near-real-time prediction workflows.",
-        "Implemented MLflow experiment tracking, model versioning, comparison, and statistical drift detection, reducing undetected model performance drops by 40%."
-      ]
-    },
-    {
-      role: "Math Tutor",
-      company: "Davis Middle School",
-      location: "Carson, CA",
-      period: "Oct 2023 - Jul 2024",
-      tags: ["Teaching", "Statistics", "Analytics"],
-      bullets: [
-        "Delivered algebra and statistics instruction to 15+ students, contributing to a 20% improvement in average exam scores through structured, data-driven lesson planning.",
-        "Designed exercises focused on equations and probability, strengthening analytical reasoning used in ML evaluation and statistical analysis.",
-        "Tracked student performance data to identify learning trends and adapt instruction through feedback loops."
+        "Designed and deployed a Retrieval-Augmented Generation pipeline in Python using LangChain, LlamaIndex, and FAISS vector databases that grounds LLM responses in domain-specific documents, cutting average retrieval time by 40% on internal test queries.",
+        "Tuned prompts and retrieval strategies (chunking, overlap, system prompts) and fine-tuned sentence transformers on domain text, iterating with stakeholder feedback to reduce off-topic and unsupported responses.",
+        "Developed embedding-based semantic search using sentence-transformer models indexed in FAISS, surfacing relevant content that simple keyword matching consistently missed.  ",
+        "Wrapped model inference in containerized FastAPI services on Docker, supporting both batch and near-real time prediction workflows for internal users.",
+        "Set up experiment tracking and model versioning in MLflow across 8 model iterations, making every result reproducible and easy to compare side by side.",
+        "Implemented drift detection and monitoring jobs that catch distribution shifts on input features, reducing undetected performance regressions by 25%.",
+        "Trained and tuned XGBoost, Random Forest, and Logistic Regression models with cross-validation and Bayesian hyperparameter search via Optuna, beating baseline accuracy by 12% on the held-out set.",
+        "Automated data ingestion, validation, and feature engineering pipelines using Python, Pandas, SQL, and AWS S3, ensuring reliable preprocessing for downstream model training and inference workflows."
       ]
     },
     {
@@ -110,20 +100,28 @@ window.portfolioData = {
       period: "Oct 2020 - Aug 2023",
       tags: ["PySpark", "Databricks", "AWS", "Kafka"],
       bullets: [
-        "Built distributed ML pipelines using Python, PySpark, and Databricks to process millions of transactional records daily for predictive analytics and financial risk, reducing pipeline runtime by 35%.",
-        "Designed and maintained a centralized feature store on AWS Redshift, ensuring training-serving consistency and eliminating feature drift across 5+ production models.",
-        "Developed and tuned XGBoost, SVM, K-Means, and PCA models with Bayesian optimization, achieving 15-20% accuracy improvements on client risk-scoring benchmarks.",
-        "Deployed scalable batch and near-real-time inference pipelines on AWS with Docker workflows for enterprise ML applications.",
-        "Automated CI/CD deployment pipelines with Git and Docker, plus SHAP explainability and ROC-AUC / precision-recall dashboards for stakeholder sign-off.",
-        "Integrated Kafka and Spark Streaming to feed live transactional signals into inference pipelines, reducing model latency by 25%."
+        "Built distributed ML pipelines using Python, PySpark, and Databricks to process high-volume transactional records daily for predictive analytics and financial risk applications, reducing pipeline runtime by 30%.",
+        "Trained and tuned supervised and unsupervised models including XGBoost, SVM, K-Means, and PCA with Bayesian hyperparameter optimization, lifting accuracy on client risk-scoring benchmarks by 15%.",
+        "Integrated Kafka and Spark Streaming components to feed live transactional signals into inference pipelines, cutting end-to-end model latency by 20%.",
+        "Deployed batch and near-real-time inference workloads on AWS with containerized Docker workflows, supporting high-throughput ML applications across enterprise client engagements.",
+        "Owned CI/CD for model deployment using Git and Docker, with SHAP-based explainability reports and ROC-AUC and precision-recall dashboards that stakeholders relied on for production sign-off.",
+        "Maintained a centralized feature store on AWS Redshift that kept training and serving features consistent, eliminating feature drift across 5 production models in active client engagements.",
+        "Drove monthly model performance reviews with data science, product, and risk stakeholders, using SHAP-based feature importance and segment-level error analysis to surface drift and bias before it affected business outcomes.",
+        "Scheduled model retraining and validation jobs in Apache Airflow with automated data quality and feature drift checks, ensuring model freshness across 5+ production deployments."
       ]
     }
   ],
   projects: [
     {
+      title: "Smart Quiz Generator – Agentic AI Learning Platform",
+      category: "Clinical ML",
+      tags: ["Survival Analysis", "FastAPI", "Docker", "SHAP"],
+      description:
+        "Created a multi-agent AI system in LangChain with 5 specialized agents (Transcription, Content Filtering, Concept Extraction, Question Generation, Evaluation) that converts YouTube lectures into concept-grounded MCQ quizzes using Llama 3.3 70B via Groq. "
+    },
+    {
       title: "Breast Cancer Survival Prediction System",
       category: "Clinical ML",
-      status: "Portfolio-ready case study",
       tags: ["Survival Analysis", "FastAPI", "Docker", "SHAP"],
       impact: "0.81 C-index",
       description:
@@ -132,7 +130,6 @@ window.portfolioData = {
     {
       title: "Heart Disease Prediction API",
       category: "Healthcare ML",
-      status: "API project",
       tags: ["Scikit-learn", "Flask", "Docker", "SHAP"],
       impact: "89% AUC",
       description:
