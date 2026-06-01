@@ -77,7 +77,7 @@ function Hero() {
       h("div", { className: "relative z-10" },
         h("p", { className: "eyebrow" }, "Machine Learning Engineer"),
         h("h1", { className: "hero-title" },
-          "Committed to building reliable AI systems",
+          "I build reliable AI systems ",
           h("span", { className: "hero-title-accent" }, "that work in production")
         ),
         h("p", { className: "mt-6 max-w-2xl text-lg leading-8 text-paper/72" }, data.profile.headline),
@@ -186,7 +186,7 @@ function Skills() {
  
   return h(
     SectionShell,
-    { id: "skills", eyebrow: "Technical toolkit", title: "Skills organized by role and expertise." },
+    { id: "skills", eyebrow: "Technical toolkit", title: "The stack behind my production ML and GenAI work." },
     h("div", { className: "mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between" },
       h("label", { className: "sr-only", htmlFor: "skill-search" }, "Search skills"),
       h("input", {
