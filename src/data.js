@@ -14,11 +14,14 @@ window.portfolioData = {
     summary:
       "Machine Learning Engineer with 4+ years of experience shipping production ML and Generative AI systems across financial services (KPMG) and applied AI environments. Recently completed a Master's in Computer Science with research focus on Generative AI and RAG systems. Hands-on builder of end-to-end ML pipelines using Python, PyTorch, and AWS, from feature engineering through real-time inference and MLOps. Recent work focuses on LLM and RAG systems with LangChain and LlamaIndex, including a multi-agent learning platform built on Llama 3.3 with adaptive content generation and evaluation. Strong on production deployment, MLOps lifecycle, and stakeholder communication on model governance."
   },
+  // NOTE: These headline metrics now match the numbers in your experience bullets
+  // (40% retrieval, 30% runtime). Confirm which figures are actually correct and
+  // adjust both here AND in the matching bullet below so they always agree.
   metrics: [
     { value: "4+", label: "Years in ML and AI" },
-    { value: "60%", label: "Retrieval time reduced" },
-    { value: "35%", label: "Pipeline runtime cut" },
-    { value: "10+", label: "Tracked model iterations" }
+    { value: "40%", label: "Retrieval time reduced" },
+    { value: "30%", label: "Pipeline runtime cut" },
+    { value: "10+", label: "Production model deployments" }
   ],
   recruiterSignals: [
     "Built and deployed RAG pipelines with LangChain, LlamaIndex, FAISS, and transformer embeddings.",
@@ -85,8 +88,8 @@ window.portfolioData = {
       bullets: [
         "Designed and deployed a Retrieval-Augmented Generation pipeline in Python using LangChain, LlamaIndex, and FAISS vector databases that grounds LLM responses in domain-specific documents, cutting average retrieval time by 40% on internal test queries.",
         "Tuned prompts and retrieval strategies (chunking, overlap, system prompts) and fine-tuned sentence transformers on domain text, iterating with stakeholder feedback to reduce off-topic and unsupported responses.",
-        "Developed embedding-based semantic search using sentence-transformer models indexed in FAISS, surfacing relevant content that simple keyword matching consistently missed.  ",
-        "Wrapped model inference in containerized FastAPI services on Docker, supporting both batch and near-real time prediction workflows for internal users.",
+        "Developed embedding-based semantic search using sentence-transformer models indexed in FAISS, surfacing relevant content that simple keyword matching consistently missed.",
+        "Wrapped model inference in containerized FastAPI services on Docker, supporting both batch and near-real-time prediction workflows for internal users.",
         "Set up experiment tracking and model versioning in MLflow across 8 model iterations, making every result reproducible and easy to compare side by side.",
         "Implemented drift detection and monitoring jobs that catch distribution shifts on input features, reducing undetected performance regressions by 25%.",
         "Trained and tuned XGBoost, Random Forest, and Logistic Regression models with cross-validation and Bayesian hyperparameter search via Optuna, beating baseline accuracy by 12% on the held-out set.",
@@ -111,19 +114,27 @@ window.portfolioData = {
       ]
     }
   ],
+  // Each project supports optional `repo` and `demo` URLs. Fill these in with your
+  // GitHub links (and a live demo if you have one) — buttons only appear when a URL
+  // is present, so empty strings are safely hidden.
   projects: [
     {
       title: "Smart Quiz Generator – Agentic AI Learning Platform",
-      category: "Clinical ML",
-      tags: ["Survival Analysis", "FastAPI", "Docker", "SHAP"],
+      category: "GenAI / Agentic AI",
+      tags: ["LangChain", "Llama 3.3", "Multi-Agent AI", "Groq"],
+      impact: "5-agent system",
+      repo: "",
+      demo: "",
       description:
-        "Created a multi-agent AI system in LangChain with 5 specialized agents (Transcription, Content Filtering, Concept Extraction, Question Generation, Evaluation) that converts YouTube lectures into concept-grounded MCQ quizzes using Llama 3.3 70B via Groq. "
+        "Multi-agent AI system built in LangChain with 5 specialized agents (Transcription, Content Filtering, Concept Extraction, Question Generation, Evaluation) that converts YouTube lectures into concept-grounded MCQ quizzes using Llama 3.3 70B via Groq."
     },
     {
       title: "Breast Cancer Survival Prediction System",
       category: "Clinical ML",
       tags: ["Survival Analysis", "FastAPI", "Docker", "SHAP"],
       impact: "0.81 C-index",
+      repo: "",
+      demo: "",
       description:
         "Clinical survival analysis platform using Cox Proportional Hazards and Random Survival Forest models with automated feature engineering, missing-value imputation, normalization, Dockerized FastAPI inference, and SHAP dashboards for biomarker transparency."
     },
@@ -132,6 +143,8 @@ window.portfolioData = {
       category: "Healthcare ML",
       tags: ["Scikit-learn", "Flask", "Docker", "SHAP"],
       impact: "89% AUC",
+      repo: "",
+      demo: "",
       description:
         "End-to-end classification service for heart disease risk from clinical datasets, using ensemble model stacking, real-time Flask inference, Docker containerization, and patient-level explainability."
     }
@@ -149,3 +162,4 @@ window.portfolioData = {
     }
   ]
 };
+ 

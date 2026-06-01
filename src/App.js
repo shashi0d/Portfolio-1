@@ -1,11 +1,11 @@
 const { useEffect, useMemo, useState } = React;
 const h = React.createElement;
 const data = window.portfolioData;
-
+ 
 function cx(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-
+ 
 function SectionShell({ id, eyebrow, title, children, className }) {
   return h(
     "section",
@@ -24,7 +24,7 @@ function SectionShell({ id, eyebrow, title, children, className }) {
     )
   );
 }
-
+ 
 function Nav() {
   const [open, setOpen] = useState(false);
   const links = ["about", "skills", "experience", "projects", "education", "contact"];
@@ -59,16 +59,16 @@ function Nav() {
     )
   );
 }
-
+ 
 function Hero() {
   const [focus, setFocus] = useState(0);
   const active = data.focusAreas[focus];
-
+ 
   useEffect(() => {
     const timer = setInterval(() => setFocus((current) => (current + 1) % data.focusAreas.length), 4200);
     return () => clearInterval(timer);
   }, []);
-
+ 
   return h(
     "section",
     { id: "home", className: "hero relative overflow-hidden pt-24" },
@@ -138,7 +138,7 @@ function Hero() {
     )
   );
 }
-
+ 
 function About() {
   return h(
     SectionShell,
@@ -170,7 +170,7 @@ function About() {
     )
   );
 }
-
+ 
 function Skills() {
   const [query, setQuery] = useState("");
   const filteredGroups = useMemo(() => {
@@ -183,7 +183,7 @@ function Skills() {
       }))
       .filter((group) => group.skills.length);
   }, [query]);
-
+ 
   return h(
     SectionShell,
     { id: "skills", eyebrow: "Technical toolkit", title: "Skills organized by role and expertise." },
@@ -210,12 +210,12 @@ function Skills() {
     )
   );
 }
-
+ 
 function Experience() {
   const [active, setActive] = useState(0);
   return h(
     SectionShell,
-    { id: "experience", eyebrow: "Experience timeline", title: "A multitude of experiences in different domains that showcases my ability to adapt to the specific project needs" },
+    { id: "experience", eyebrow: "Experience timeline", title: "Experience across domains, adapting to what each project needs." },
     h("div", { className: "grid gap-5 lg:grid-cols-[0.42fr_1fr]" },
       h("div", { className: "space-y-3" },
         data.experience.map((job, index) =>
@@ -254,15 +254,15 @@ function Experience() {
     )
   );
 }
-
+ 
 function Projects() {
   const [selectedTag, setSelectedTag] = useState("All");
   const tags = ["All", ...Array.from(new Set(data.projects.flatMap((project) => project.tags)))];
   const projects = selectedTag === "All" ? data.projects : data.projects.filter((project) => project.tags.includes(selectedTag));
-
+ 
   return h(
     SectionShell,
-    { id: "projects", eyebrow: "Selected work", title: "Projects that showcase my commitment to upskilling and pushing the frontier of novel technologies" },
+    { id: "projects", eyebrow: "Selected work", title: "Projects exploring the frontier of ML and GenAI." },
     h("div", { className: "mb-6 flex flex-wrap gap-2" },
       tags.map((tag) =>
         h("button", {
@@ -280,19 +280,28 @@ function Projects() {
               h("p", { className: "font-mono text-xs uppercase tracking-[0.24em] text-mint" }, project.category),
               h("h3", { className: "mt-3 text-2xl font-black text-paper" }, project.title)
             ),
-            h("span", { className: "impact-badge" }, project.impact)
+            project.impact ? h("span", { className: "impact-badge" }, project.impact) : null
           ),
           h("p", { className: "mt-5 text-sm leading-7 text-paper/68" }, project.description),
           h("div", { className: "mt-6 flex flex-wrap gap-2" },
             project.tags.map((tag) => h("span", { key: tag, className: "mini-tag" }, tag))
           ),
-          h("p", { className: "mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-paper/42" }, project.status)
+          (project.repo || project.demo)
+            ? h("div", { className: "mt-6 flex flex-wrap gap-3" },
+                project.repo
+                  ? h("a", { className: "secondary-btn", href: project.repo, target: "_blank", rel: "noreferrer" }, "View code")
+                  : null,
+                project.demo
+                  ? h("a", { className: "secondary-btn", href: project.demo, target: "_blank", rel: "noreferrer" }, "Live demo")
+                  : null
+              )
+            : null
         )
       )
     )
   );
 }
-
+ 
 function Education() {
   return h(
     SectionShell,
@@ -308,7 +317,7 @@ function Education() {
     )
   );
 }
-
+ 
 function Contact() {
   return h(
     "section",
@@ -344,7 +353,7 @@ function Contact() {
     )
   );
 }
-
+ 
 function App() {
   return h(
     React.Fragment,
@@ -364,5 +373,6 @@ function App() {
     )
   );
 }
-
+ 
 ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+ 
