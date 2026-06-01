@@ -123,7 +123,7 @@ window.portfolioData = {
       category: "GenAI / Agentic AI",
       tags: ["LangChain", "Llama 3.3", "Multi-Agent AI", "Groq"],
       impact: "5-agent system",
-      repo: "",
+      repo: "https://github.com/PranathiDeepak/smart-quiz-generator",
       demo: "",
       description:
         "Multi-agent AI system built in LangChain with 5 specialized agents (Transcription, Content Filtering, Concept Extraction, Question Generation, Evaluation) that converts YouTube lectures into concept-grounded MCQ quizzes using Llama 3.3 70B via Groq."
