@@ -9,7 +9,7 @@ window.portfolioData = {
     linkedin: "https://linkedin.com/in/pranathi-deepak",
     github: "https://github.com/PranathiDeepak",
     photo: "picture.jpeg",
-    resumeFile: "https://pranathideepak.github.io/Portfolio/PranathiDeepakResume.pdf",
+    resumeFile: "https://pranathideepak.github.io/Portfolio/PranathiDeepak_Resume.pdf",
     headline: "Production ML, GenAI, RAG, and MLOps systems that move from notebooks to reliable user-facing products.",
     summary:
       "Machine Learning Engineer with 4+ years of experience shipping production ML and Generative AI systems across financial services (KPMG) and applied AI environments. Recently completed a Master's in Computer Science with research focus on Generative AI and RAG systems. Hands-on builder of end-to-end ML pipelines using Python, PyTorch, and AWS, from feature engineering through real-time inference and MLOps. Recent work focuses on LLM and RAG systems with LangChain and LlamaIndex, including a multi-agent learning platform built on Llama 3.3 with adaptive content generation and evaluation. Strong on production deployment, MLOps lifecycle, and stakeholder communication on model governance."
