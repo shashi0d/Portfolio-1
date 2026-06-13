@@ -3,7 +3,7 @@ import { createReadStream, existsSync, statSync } from "node:fs";
 import { extname, join, normalize } from "node:path";
 
 const root = process.cwd();
-const port = Number(process.env.PORT || 4173);
+const port = Number(process.env.PORT || 3001);
 
 const types = {
   ".html": "text/html; charset=utf-8",

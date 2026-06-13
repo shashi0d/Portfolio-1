@@ -1,0 +1,40 @@
+# Pranathi Deepak
+
+> Machine Learning Engineer with 4+ years building production ML and Generative AI systems. Based in Los Angeles, CA — open to relocation.
+
+## Summary
+
+Machine Learning Engineer with 4+ years of experience shipping production ML and Generative AI systems across financial services (KPMG) and applied AI environments. Recently completed a Master's in Computer Science with a research focus on Generative AI and RAG systems. Hands-on builder of end-to-end ML pipelines using Python, PyTorch, and AWS — from feature engineering through real-time inference and MLOps. Recent work focuses on LLM and RAG systems with LangChain and LlamaIndex, including a multi-agent learning platform built on Llama 3.3 with adaptive content generation and evaluation.
+
+## Core skills
+
+- ML & AI: XGBoost, Random Forest, Gradient Boosting, SVM, Clustering, Scikit-learn, Hyperparameter Tuning, SHAP, ROC-AUC
+- Generative & Agentic AI: LLMs, RAG, LangChain, LangChain Agents, LlamaIndex, FAISS, Pinecone, Prompt Engineering, Multi-Step Reasoning
+- Deep Learning & NLP: PyTorch, TensorFlow, CNNs, RNNs, LSTMs, Transformers, Embeddings, Semantic Search
+- MLOps & Cloud: AWS (S3, EC2, SageMaker, Lambda, Redshift), Azure ML, GCP Vertex AI, Docker, Kubernetes, Airflow, MLflow, CI/CD, Drift Detection
+- Data & Streaming: Pandas, NumPy, Spark, Spark Streaming, Kafka, Databricks, ETL/ELT
+- APIs & Deployment: FastAPI, Flask, REST APIs, Batch/Real-Time Inference, Python, SQL, Java, R
+
+## Experience
+
+- Machine Learning Engineer, California State University, Dominguez Hills (Carson, CA) — Aug 2024 to Dec 2025. Built a RAG pipeline (LangChain, LlamaIndex, FAISS) cutting retrieval time by 40%; trained XGBoost/Random Forest models with Optuna tuning, beating baseline accuracy by 12%; set up MLflow experiment tracking across 8 model iterations; implemented drift detection reducing undetected regressions by 25%; deployed FastAPI/Docker inference services.
+- Machine Learning Engineer, KPMG Global Services (Bengaluru, India) — Oct 2020 to Aug 2023. Built distributed ML pipelines with PySpark/Databricks, reducing pipeline runtime by 30%; trained XGBoost/SVM/K-Means/PCA models, lifting accuracy 15%; integrated Kafka/Spark Streaming, cutting latency by 20%; maintained a feature store on AWS Redshift across 5 production models; scheduled retraining via Apache Airflow across 5+ deployments.
+
+## Projects
+
+- Smart Quiz Generator – Agentic AI Learning Platform: a 5-agent LangChain system (Transcription, Content Filtering, Concept Extraction, Question Generation, Evaluation) converting YouTube lectures into MCQ quizzes via Llama 3.3 70B on Groq. https://github.com/PranathiDeepak/smart-quiz-generator
+- Breast Cancer Survival Prediction System: Cox Proportional Hazards and Random Survival Forest models, Dockerized FastAPI inference, SHAP dashboards. 0.81 C-index.
+- Heart Disease Prediction API: ensemble model stacking, real-time Flask inference, Docker, SHAP explainability. 89% AUC.
+
+## Education
+
+- Master of Science in Computer Science, California State University, Dominguez Hills (Carson, CA) — research focus on Generative AI and RAG systems.
+- Bachelor of Science in Computer Science, K.S. School of Engineering and Management (Bengaluru, KA).
+
+## Links
+
+- Website: https://pranathideepak.github.io/Portfolio/
+- LinkedIn: https://linkedin.com/in/pranathi-deepak
+- GitHub: https://github.com/PranathiDeepak
+- Email: pranathideepak16@gmail.com
+- Resume: https://pranathideepak.github.io/Portfolio/PranathiDeepak_Resume.pdf
