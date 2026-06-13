@@ -52,7 +52,7 @@ function Nav() {
     h(
       "div",
       { className: "nav-inner" },
-      h("span", { className: "nav-name" }, data.profile.name),
+      h("span", { className: "nav-name" }, "PD", h("span", { className: "nav-name-dot" })),
       h(
         "div",
         { className: "nav-links" },

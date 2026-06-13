@@ -69,8 +69,27 @@ nav.site-nav {
 }
 
 .nav-name {
-  font-weight: 600;
-  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.nav-name-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #7c5cff, #ff9a5a, #4cc9c4, #7c5cff);
+  background-size: 300% 300%;
+  animation: dot-gradient 4s linear infinite;
+}
+
+@keyframes dot-gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
 }
 
 .nav-links {
